@@ -39,7 +39,6 @@
         }
     };
 
-    // Override the window.location.href setter to prevent setting to forbidden URLs
     Object.defineProperty(window.location, 'href', {
         set: function(url) {
             if (isAllowedDomain(url)) {
